@@ -1,0 +1,19 @@
+.pIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pImg{
+height: 200px;
+/* width: 200px; */
+margin: 20px;
+/* object-fit: cover; */
+border-radius: 10px;
+}
+.pImg:hover{
+    opacity: 0.8;
+}
+.pIcons{
+    display: flex;
+    flex-wrap: wrap;
+}

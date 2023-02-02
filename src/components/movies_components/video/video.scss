@@ -1,0 +1,44 @@
+.watch.movie{
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    // overflow: hidden;
+    background-color: black;
+
+    .back{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .playing{
+        width: 60px;
+        height: 100%;
+        object-fit: cover;
+    }
+    .logo{
+        left: 0;
+        margin-right: 40px;    
+        margin-top: 40px;                
+        // height: 30px;
+        // width: 160vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: black;
+        margin-left: 50px;
+        color: white;
+        color: orangered;
+        font-size: 100px;
+        font-family: 'Bebas Neue', cursive;
+        
+        &::first-letter{
+            font-size: 100px;
+        }
+        
+    }
+}
