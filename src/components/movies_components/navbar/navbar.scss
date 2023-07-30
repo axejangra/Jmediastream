@@ -1,3 +1,4 @@
+
 .navbar.movies{
     color: white;
     font-size: 14px;
@@ -34,8 +35,20 @@
             //     margin-right: 40px;
             // }
             span{
-                margin-right: 20px;
+                margin-right: 25px;
                 cursor: pointer;
+                border: 2px solid black;
+                padding: 1px 4px ;
+                border-radius: 4px;
+                text-align: center;
+
+            }
+            span:hover{
+                color: orangered;
+                transition: .3s;
+                font-weight: 900;
+                border-bottom: 2px solid rgb(211, 60, 5);
+
             }
             
 
@@ -50,11 +63,11 @@
                     margin-left: 50px;
                     color: white;
                     color: orangered;
-                    font-size: 70px;
+                    font-size: 50px;
                     font-family: 'Bebas Neue', cursive;
                     
                     &::first-letter{
-                        font-size: 100px;
+                        font-size: 50px;
                     }
                     
                 }
@@ -69,15 +82,32 @@
             position: absolute;
             right: 20px;
             .icon.movie{
+            
                 margin: 0px 15px;
                 cursor: pointer;
             }
+            .icon{
+                padding: 4px;
+               width: 40px;
+               height: 40px; 
+            }
+            .icon:hover{
+               color: orangered ;
+               transform: rotateX(360deg);
+               transition: .8s;
+               animation: moveIt  1s ease-in-out ;
+            }
+         
             img{
+                margin-right: 10px;
                 width: 30px;
                 height: 30px;
                 border-radius: 5px;
                 object-fit: cover;
                 cursor: pointer;
+            }
+            span:hover{
+                color: orangered;
             }
             .profile{
                 .options{
@@ -89,6 +119,9 @@
                 span{
                     padding: 10px;
                     cursor: pointer;
+                }
+                span:hover{
+                   color: orangered;
                 }
                 &:hover{
                     .options.movie{
@@ -105,4 +138,12 @@
         }
 
     }
+    @keyframes moveIt {
+        0%, 100% {
+          transform: rotate(35deg);
+        }
+        50% {
+          transform: rotate(-35deg);
+        }
+      }
 }

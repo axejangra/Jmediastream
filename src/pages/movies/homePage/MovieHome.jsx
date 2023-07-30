@@ -1,25 +1,25 @@
-import { AcUnit } from '@material-ui/icons'
+
 import React, { useState } from 'react'
 import Footer from '../../../components/footer/Footer';
 import Featured from '../../../components/movies_components/featured/Featured';
-// import Footer from '../../../components/movies_components/footer/Footer';
 import List from '../../../components/movies_components/list/List';
 import Navbar from '../../../components/movies_components/navbar/Navbar';
-// import Featured from '../components/featured/Featured'
-// import Footer from '../components/footer/Footer'
-// import List from '../components/list/List'
-// import Navbar from '../components/navbar/Navbar'
+
 import "./movieHome.scss"
+import Loading from '../../../components/movies_components/Loading/Loading';
 
 
 const MovieHome = () => {
   const [type, setType]= useState("movie");
   const [genre, setGenre]= useState(35);
-  console.log(`this is the genre selected : ${genre} this is the type: ${type}`)
+  const [loading, setLoading] = useState(true)
+  setTimeout(() => {
+    setLoading(false)
+  }, 1500);
   return (
-    <div className='MovieHome'>
-        <Navbar setType={setType} />
-        
+   
+   loading ?  <Loading/> : <div className='MovieHome'>
+          <Navbar setType={setType} />
          <Featured type={type} setGenre={setGenre} />
          <List name="Continue to Watch" type={type} genre={genre} />
          <List name="Popular on JMedia" type={type} genre={genre} />

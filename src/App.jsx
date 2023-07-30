@@ -14,7 +14,6 @@ import MainPage from "./pages/movies/mainPage/MainPage";
 import Partners from "./pages/partners/Partners";
 
 function App() {
-  console.log(`${process.env.REACT_APP_NEWS_API}`)
   return (
     <BrowserRouter>
     <Routes>
@@ -27,15 +26,7 @@ function App() {
       <Route path="/JMedia/movie/video" element={<Video/>} />
     </Routes>
     </BrowserRouter>
-    // <div className="App" style={{display:"flex", flexDirection:"column", alignItems:"center", width:"100vw"}}>
-    //   {/* <h1>Welccome to JMedia.com</h1> */}
-    //   {/* <Topbar/> */}
-    //   {/* <Menu/> */}
-    //   {/* <Chips/> */}
-    //   {/* <Card/> */}
-    //   <Home/>
-    //   <Footer/>
-    // </div>
+ 
   );
 }
 

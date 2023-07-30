@@ -17,7 +17,6 @@ const Home = () => {
     const [articles, setArticles]=useState([]);
     const[selectedCategory, setSelectedCategory]=useState("");
     const [query, setQuery]= useState("");
-    console.log(selectedCategory);
     useEffect(()=>{
         const fetchData= async()=>{
             if(selectedCategory){
@@ -34,8 +33,6 @@ const Home = () => {
         fetchData();
     },[setArticles, selectedCategory]);
     // console.log(`this is the Homepage data: ${JSON.stringify(articles)}`)
-    console.log(`this is the selected category :${selectedCategory}`);
-    console.log(`query is ${query}`);
   return (
     <>
     <Topbar setQuery={setQuery} />

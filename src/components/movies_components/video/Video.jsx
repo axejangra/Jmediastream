@@ -12,7 +12,7 @@ const Video = () => {
             Home
         </div></Link>
         <video autoPlay progress controls src={kgf}
-        style={{width:"100vw", height:"60vh", backgroundColor:"black", paddingTop:"40px"}}  
+        style={{width:"100vw", height:"70vh", backgroundColor:"black", paddingTop:"40px"}}  
         className="player"
         />
         <div className="logo">JMedia+</div>

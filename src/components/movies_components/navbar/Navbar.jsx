@@ -5,19 +5,13 @@ import "./navbar.scss"
 
 const Navbar = ({setType}) => {
     const [scroll, setScroll] = useState(false);
-    console.log(window.pageYOffset)
     useEffect(()=>{
         window.onscroll = () => {
         window.pageYOffset === 0 ? setScroll(false) : setScroll(true);
-        //  return()=> (window.onscroll=null)
     };
     },[])
     
-    console.log(scroll)
     return (
-        // <div className={scroll ? "navbar scroll" : "navbar"}
-        // // style={{backgroundColor:`${scroll & "transparent"}`}}
-        // >
         <div className={scroll ? "navbar movies scroll": "navbar movies"}>
             <div className="container movie">
                 <div className="left movie">
@@ -38,7 +32,7 @@ const Navbar = ({setType}) => {
                     <Notifications className='icon movie' />
                     <img src="https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000" alt="" />
                     <div className="profile movie">
-                        <ArrowDropDown className='icon movie' />
+                        <ArrowDropDown className=' movie' />
                         <div className="options movie">
                             <span>Settings</span>
                             <span><Link className='link' to="/" >Logout</Link> </span>
