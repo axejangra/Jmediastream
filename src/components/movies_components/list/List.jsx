@@ -108,34 +108,35 @@ const List = ({ name, type, genre }) => {
   useEffect(() => {
     const fetchData = async () => {
         const res = await axios.get(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`)
+        console.log(res.data.results);
         setData(res.data.results)
-      try {
-        if (name === "Popular on JMedia") {
-          setApiKey(
-            `https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`
-          );
-          const res = await axios.get(`${apiKey}`);
-          setData(res.data.results);
+    //   try {
+    //     if (name === "Popular on JMedia") {
+    //       setApiKey(
+    //         `https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`
+    //       );
+    //       const res = await axios.get(`${apiKey}`);
+    //       setData(res.data.results);
           
-        } else if (name === "Continue to Watch") {
-          setApiKey(
-            `https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`
-          );
-          const res = await axios.get(`${apiKey}`);
-          setData(res.data.results);
+    //     } else if (name === "Continue to Watch") {
+    //       setApiKey(
+    //         `https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`
+    //       );
+    //       const res = await axios.get(`${apiKey}`);
+    //       setData(res.data.results);
           
-        } else {
-          setApiKey(
-            `https://api.themoviedb.org/3/trending/${type}/week?api_key=${api}`
-          );
-          const res = await axios.get(`${apiKey}`);
-          setData(res.data.results);
+    //     } else {
+    //       setApiKey(
+    //         `https://api.themoviedb.org/3/trending/${type}/week?api_key=${api}`
+    //       );
+    //       const res = await axios.get(`${apiKey}`);
+    //       setData(res.data.results);
          
-        }
+    //     }
         
-      } catch (err) {
-        console.log(`list page error : ${err}`);
-      }
+    //   } catch (err) {
+    //     console.log(`list page error : ${err}`);
+    //   }
     };
     fetchData();
   }, [type, apiKey, name]);
