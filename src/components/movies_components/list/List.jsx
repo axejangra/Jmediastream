@@ -9,7 +9,6 @@ import ListItem from "../listItem/ListItem";
 import "./list.scss";
 
 const List = ({ name, type, genre }) => {
-    console.log(name , type, genre);
     const initialdata = [{
         "adult": false,
         "backdrop_path": "/dWvDlTkt9VEGCDww6IzNRgm8fRQ.jpg",
@@ -108,7 +107,7 @@ const List = ({ name, type, genre }) => {
   useEffect(() => {
     const fetchData = async () => {
         const res = await axios.get(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${api}`)
-        console.log(res.data.results);
+        
         setData(res.data.results)
     //   try {
     //     if (name === "Popular on JMedia") {
