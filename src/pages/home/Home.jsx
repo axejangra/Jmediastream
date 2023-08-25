@@ -57,7 +57,7 @@ const Home = () => {
             <Ad/>
         </div>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
     
   )

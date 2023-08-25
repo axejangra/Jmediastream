@@ -40,7 +40,7 @@ const Partners = () => {
             </li>
         </ul>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }
